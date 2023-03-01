@@ -367,7 +367,9 @@ MonoBehaviour:
   openButton: {fileID: 602911957}
   closeButton: {fileID: 2083241667}
   workers:
+  - {fileID: 11400000, guid: 2346a101cbe2fa64986e87c6db9280a2, type: 2}
   - {fileID: 11400000, guid: 875057aae71e53a4fbbea89d56b3cdfb, type: 2}
+  - {fileID: 11400000, guid: 66c441a47f15dd04c85cb66f5c76ad97, type: 2}
 --- !u!1 &393271523
 GameObject:
   m_ObjectHideFlags: 0

@@ -233,6 +233,7 @@ MonoBehaviour:
   buyButton: {fileID: 4433906240696069924}
   priceText: {fileID: 7597476020244622732}
   pointsPerSecondsText: {fileID: 2250383480357354576}
+  workerCounter: {fileID: 0}
 --- !u!1 &7597476020099598645
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,8 +451,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 34
+  m_fontSizeBase: 34
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

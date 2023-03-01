@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Shop Worker 1
   m_EditorClassIdentifier: 
   workerName: Shop Worker
+  workerCounter: 0
   power: 1
-  price: 5
+  price: 160
+  pointsPerSeconds: 5

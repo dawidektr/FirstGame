@@ -12,11 +12,21 @@ public class ShopWorkerUI : MonoBehaviour
     [SerializeField] private Button buyButton;
     [SerializeField] private TextMeshProUGUI priceText;
     [SerializeField] private TextMeshProUGUI pointsPerSecondsText;
+    [SerializeField] private TextMeshProUGUI workerCounter;
 
 
-    public void UpdateUI(Worker worker)
+    private Worker worker;
+    private ClickerMenager clickerMenager;
+
+    public void Init(Worker worker,ClickerMenager clickerMenager)
     {
-        nameText.text = worker.workerName;
+        this.worker = worker;
+        this.clickerMenager = clickerMenager;
+    }
+
+    public void UpdateUI()
+    {
+        nameText.text = $"{worker.workerName} {worker.workerCounter}";
         powerText.text = worker.power.ToString();
         priceText.text = worker.price.ToString();
         pointsPerSecondsText.text =  $"{worker.pointsPerSeconds.ToString()}/s";
@@ -27,10 +37,15 @@ public class ShopWorkerUI : MonoBehaviour
 
     private void BuyButtonClick(int price,int power)
     {
-        ClickerMenager.OnItemBought?.Invoke(price,power);
+        if (worker.price<= clickerMenager.PointsCounter)
+        {
+            ClickerMenager.OnItemBought?.Invoke(price,power);
+            worker.buyWorker();
+            UpdateUI();
+        }
     }
 
-   
+  
 
 }
 

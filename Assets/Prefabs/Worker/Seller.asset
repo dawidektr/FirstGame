@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Seller
   m_EditorClassIdentifier: 
   workerName: Seller
+  workerCounter: 0
   power: 10
   price: 500
+  pointsPerSeconds: 0

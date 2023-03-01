@@ -11,11 +11,14 @@ public class ShopUI : MonoBehaviour
 
 
 
-    public void AddWorker(Worker worker)
+    public void AddWorker(Worker worker,ClickerMenager clickerMenager)
     {
         var newWorker = Instantiate(shopWorkerUI, content);
-        newWorker.UpdateUI(worker);
+        newWorker.Init(worker, clickerMenager);
+        newWorker.UpdateUI();
     }
+
+   
 
     public void OpenShop()
     {

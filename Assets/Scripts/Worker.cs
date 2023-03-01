@@ -7,13 +7,18 @@ public class Worker : ScriptableObject
 {
     [Header("General")]
     public string workerName;
+    public int workerCounter;
     public int power;
     public int price;
     public int pointsPerSeconds;
 
-
-    public void addPoints()
+    public void buyWorker()
     {
         pointsPerSeconds += power;
+        workerCounter += 1;
+        price = price / workerCounter * (workerCounter + 1);
     }
+
+   
+
 }

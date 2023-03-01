@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Farmer
   m_EditorClassIdentifier: 
   workerName: Farmer
+  workerCounter: 0
   power: 4
-  price: 30
+  price: 120
+  pointsPerSeconds: 8

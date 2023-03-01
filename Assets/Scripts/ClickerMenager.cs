@@ -21,8 +21,11 @@ public class ClickerMenager : MonoBehaviour
 
     [SerializeField] private List<Worker> workers;
 
+    
 
     private int pointsCounter = 0;
+
+    public int PointsCounter => pointsCounter;
     private int PointsPerSecord = 0;
 
     private void Start()
@@ -35,7 +38,7 @@ public class ClickerMenager : MonoBehaviour
 
         foreach(Worker worker in workers)
         {
-            shopUI.AddWorker(worker);
+            shopUI.AddWorker(worker,this);
         }
 
         OnItemBought.AddListener(BuyItem);
@@ -49,6 +52,7 @@ public class ClickerMenager : MonoBehaviour
             PointsPerSecord += power;
             pointsCounter -= price;
             clickerUI.updateUI(pointsCounter, PointsPerSecord);
+            
         }
     }
 
